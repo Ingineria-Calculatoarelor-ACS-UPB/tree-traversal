@@ -54,6 +54,7 @@ class Tree:
             return None
 
     def _find(self, data, node):
+        """Method for find data in the tree"""
         if data == node.data:
             return node
         elif (data < node.data and node.left is not None):
