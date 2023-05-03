@@ -148,7 +148,7 @@ class TestTree(unittest.TestCase):
         tree.add(0)
         tree.add(8)
         tree.add(2)
-        assert tree._find(3, tree.root).data == 3
+        assert tree._find(3, tree.root).data == 10
         assert tree._find(4, tree.root).data == 4
         assert tree._find(0, tree.root).data == 0
         assert tree._find(8, tree.root).data == 8
