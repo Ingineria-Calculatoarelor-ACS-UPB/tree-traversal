@@ -16,3 +16,12 @@ jobs:
             sudo apt install doxygen
             doxygen -g
             doxygen
+      - name: Upload a Build Artifact
+        with:
+            name: docfiles
+            path: |
+              html/
+              latex/
+              Doxyfile
+            if-no-files-found: error
+
