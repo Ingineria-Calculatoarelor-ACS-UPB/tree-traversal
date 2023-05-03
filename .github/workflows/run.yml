@@ -14,3 +14,9 @@ jobs:
         shell: bash
         run: |
           python3 -m unittest tree.py
+      - name: Discord notification
+        if: ${{ failure() }}
+        uses: appleboy/discord-action@master
+        with:
+          webhook_url: 'https://discord.com/api/webhooks/1103323884943581234/F6QvICcgtC3XSgEZyqehex1xJNNRtbqtISJ3OfgIjKbHpXYslkhcfAWhCQsmwZmcCk-I'
+          content: "Unit tests have failed!"
