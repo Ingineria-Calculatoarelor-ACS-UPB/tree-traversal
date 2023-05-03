@@ -17,4 +17,4 @@ jobs:
         shell: bash
         run: |
           python3 main.py
-          apt-get install python3-pytest && python3 -m pytest tree.py
+          sudo apt-get install python3-pytest && python3 -m pytest tree.py
