@@ -115,6 +115,7 @@ class Tree:
 
 
 class TestTree:
+    """ Test tree class """
     def test_first_find(self):
         tree = Tree()
         tree.add(9)
