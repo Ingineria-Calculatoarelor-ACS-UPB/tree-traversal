@@ -13,5 +13,6 @@ jobs:
       - name: 🚀 Run
         shell: bash
         run: |
+            sudo apt install doxygen
             doxygen -g
             doxygen
