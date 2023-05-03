@@ -1,0 +1,12 @@
+name: Traversal tree tests
+on:
+  pull_request:
+    types: [opened, reopened]
+
+      
+jobs:
+  if_merged:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - run: pytest
