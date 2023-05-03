@@ -62,27 +62,77 @@ class Tree:
             return self._find(data, node.right)
 
     def deleteTree(self):
-        # TODO 1
+        """ Method for deleting tree """
         self.root = None
 
     def printTree(self):
-        # TODO 1
+        """ Method for printing tree """
         if self.root is not None:
-            self._printInorderTree(self.root)
+            self.printInorderTree(self.root)
 
-    def _printInorderTree(self, node):
-        # TODO 1
+    def printInorderTree(self, node):
+        """Prints inordered traversal of the tree
+
+        Args:
+            node (Node): root node of the tree
+
+        Returns:
+            None
+        """
         if node is not None:
-            self._printInorderTree(node.left)
+            self.printInorderTree(node.left)
             print(str(node.data) + ' ')
-            self._printInorderTree(node.right)
+            self.printInorderTree(node.right)
 
-    def _printPreorderTree(self, node):
-        # TODO 2
-        pass
+    def printPreorderTree(self, node):
+        """Prints preorder traversal of the tree
 
-    def _printPostorderTree(self, node):
-        # TODO 2
-        pass
+        Args:
+            node (Node): root node of the tree
+
+        Returns:
+            None
+        """
+        if node is not None:
+            print(str(node.data) + ' ')
+            self.printPreorderTree(node.left)
+            self.printPreorderTree(node.right)
+
+    def printPostorderTree(self, node):
+        """Prints postorder traversal of the tree
+
+        Args:
+            node (Node): root node of the tree
+
+        Returns:
+            None
+        """
+        if node is not None:
+            self.printPostorderTree(node.left)
+            self.printPostorderTree(node.right)
+            print(str(node.data) + ' ')
 
 
+from random import randint
+NUM_ITERATIONS = 100
+
+def test_find():
+    tree = Tree()
+    for i in range(NUM_ITERATIONS):
+        tree.add(i)
+
+    for i in range(NUM_ITERATIONS):
+        assert tree.find(i) is not None
+
+    for i in range(NUM_ITERATIONS):
+        assert tree.find(i + NUM_ITERATIONS) is None
+
+def test_find_random():
+    tree = Tree()
+    values = []
+    for i in range(NUM_ITERATIONS):
+        values.append(randint(1, 100))
+        tree.add(values[i])
+
+    for i in range(len(values)):
+        assert tree.find(values[i]) is not None
