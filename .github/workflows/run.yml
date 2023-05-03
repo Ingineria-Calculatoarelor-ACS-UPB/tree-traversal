@@ -13,7 +13,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      -name: Install dependencies
+      - name: Install dependencies
         shell: bash
         run: |
           sudo apt-get install python3-pytest
