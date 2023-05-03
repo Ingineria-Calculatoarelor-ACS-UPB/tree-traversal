@@ -13,6 +13,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install dependencies
+        shell: bash
+        run: |
+          apt-get install python3-pytest
+
       - name: 🚀 Run
         shell: bash
         run: |
