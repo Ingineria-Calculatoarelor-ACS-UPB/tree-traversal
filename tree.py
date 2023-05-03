@@ -1,4 +1,5 @@
 from node import Node
+import unittest
 
 
 class Tree:
@@ -62,27 +63,74 @@ class Tree:
             return self._find(data, node.right)
 
     def deleteTree(self):
-        # TODO 1
+        """Method for deleting the tree
+
+        Args:
+
+        Returns:
+            None
+        """
         self.root = None
 
     def printTree(self):
-        # TODO 1
+        """Method for printing the tree
+
+        Args:
+
+        Returns:
+            None
+        """
         if self.root is not None:
             self._printInorderTree(self.root)
 
     def _printInorderTree(self, node):
-        # TODO 1
+        """Method for printing the tree inorder
+
+        Args:
+
+        Returns:
+            None
+        """
         if node is not None:
             self._printInorderTree(node.left)
             print(str(node.data) + ' ')
             self._printInorderTree(node.right)
 
     def _printPreorderTree(self, node):
-        # TODO 2
-        pass
+        """Method for printing the tree preorder
+
+        Args:
+
+        Returns:
+            None
+        """
+        if node is not None:
+            print(str(node.data) + ' ')
+            self._printInorderTree(node.left)
+            self._printInorderTree(node.right)
+
 
     def _printPostorderTree(self, node):
-        # TODO 2
-        pass
+        """Method for printing the tree postorder
 
+        Args:
+
+        Returns:
+            None
+        """
+        if node is not None:
+            self._printInorderTree(node.left)
+            self._printInorderTree(node.right)
+            print(str(node.data) + ' ')
+
+
+def test__find_none():
+    t=Tree()
+    n=Node(0)
+    assert (t._find(1,n)) is None
+def test__find_sth():
+    t=Tree()
+    n=Node(1)
+    t.add(n)
+    assert t._find(1,n) is not None
 
