@@ -39,7 +39,7 @@ jobs:
 
       - name: Install Deps
         run: |
-          apt install -y doxygen
+          sudo apt install -y doxygen
 
       - name: Generate Doxygen
         shell: bash
