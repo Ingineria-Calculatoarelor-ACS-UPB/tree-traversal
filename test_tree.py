@@ -16,7 +16,7 @@ def tree():
     return tree
 
 def test_find1(tree):
-    assert tree._find(2, tree.getRoot()) == Node(2)
+    assert tree._find(8, tree.getRoot()) == Node(8)
 
 def test_find2(tree):
     assert tree._find(12, tree.getRoot()) == None
