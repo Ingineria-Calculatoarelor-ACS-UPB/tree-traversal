@@ -60,29 +60,50 @@ class Tree:
             return self._find(data, node.left)
         elif (data > node.data and node.right is not None):
             return self._find(data, node.right)
+        return None
 
     def deleteTree(self):
         # TODO 1
+        """ Method for delete tree """
         self.root = None
 
     def printTree(self):
         # TODO 1
+        """ Method for print tree """
         if self.root is not None:
             self._printInorderTree(self.root)
 
     def _printInorderTree(self, node):
         # TODO 1
+        """ 
+        Method for print inorder tree
+        node: root node 
+        """
         if node is not None:
             self._printInorderTree(node.left)
             print(str(node.data) + ' ')
             self._printInorderTree(node.right)
 
     def _printPreorderTree(self, node):
-        # TODO 2
+        """ 
+        Method for print preorder tree
+        node: root node 
+        """
+        if node is not None:
+            print(str(node.data) + ' ')
+            self._printInorderTree(node.left)
+            self._printInorderTree(node.right)
         pass
 
     def _printPostorderTree(self, node):
-        # TODO 2
+        """ 
+        Method for print postorder tree
+        node: root node 
+        """
+        if node is not None:
+            self._printInorderTree(node.left)
+            self._printInorderTree(node.right)
+            print(str(node.data) + ' ')
         pass
 
 

@@ -6,3 +6,8 @@ class Node:
         self.right = None
         self.data = data
 
+    def __eq__ (self, __value: object) -> bool:
+        """
+        Method for compare two nodes
+        """
+        return self.data == __value.data
