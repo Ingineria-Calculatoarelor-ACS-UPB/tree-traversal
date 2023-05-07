@@ -3,6 +3,7 @@ from node import Node
 class Tree:
     """ Tree class for binary tree """
 
+    
     def __init__(self):
         """ Constructor for Tree class """
         self.root = None
