@@ -6,3 +6,6 @@ class Node:
         self.right = None
         self.data = data
 
+    def __eq__(self, __value: object) -> bool:
+        return self.data == __value.data
+
