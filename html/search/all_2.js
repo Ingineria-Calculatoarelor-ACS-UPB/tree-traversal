@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['find_2',['find',['../classtree_1_1Tree.html#a1ab25ba4724a490f0e93c12801ab32d2',1,'tree::Tree']]]
+  ['deletetree_3',['deleteTree',['../classtree_1_1Tree.html#a1537147bce0c8fba10d7512630325d25',1,'tree::Tree']]]
 ];

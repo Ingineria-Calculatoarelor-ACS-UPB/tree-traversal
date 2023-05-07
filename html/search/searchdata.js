@@ -1,8 +1,8 @@
 var indexSectionsWithContent =
 {
-  0: "_afgnt",
+  0: "_adfgnpt",
   1: "nt",
-  2: "_afg",
+  2: "_adfgp",
   3: "t"
 };
 

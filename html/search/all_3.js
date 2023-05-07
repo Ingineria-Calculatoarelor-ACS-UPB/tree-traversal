@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getroot_3',['getRoot',['../classtree_1_1Tree.html#aeafbc59fabeae3758a3298f167bdf5af',1,'tree::Tree']]]
+  ['find_4',['find',['../classtree_1_1Tree.html#a1ab25ba4724a490f0e93c12801ab32d2',1,'tree::Tree']]]
 ];
