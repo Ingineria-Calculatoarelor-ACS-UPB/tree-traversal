@@ -1,6 +1,11 @@
 name: 🚀 Run
 
 on:
+  pull_request:
+    types: [opened]
+  push:
+    tags:
+      - '*'
   workflow_dispatch:
 
 jobs:
@@ -13,7 +18,36 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install Deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+
       - name: 🚀 Run
         shell: bash
         run: |
-          python3 main.py
+          pytest
+
+  gen-doxygen:
+    name: 📝 Generate Doxygen
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install Deps
+        run: |
+          sudo apt install -y doxygen
+
+      - name: Generate Doxygen
+        shell: bash
+        run: |
+          doxygen Doxyfile
+
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: doxygen
+          path: html
