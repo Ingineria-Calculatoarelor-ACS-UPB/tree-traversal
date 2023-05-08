@@ -17,7 +17,7 @@ jobs:
         shell: bash
         run: |
           python3 main.py
-  run:
+  run2:
     name: 🚀 Run 2
     runs-on: ubuntu-latest
     steps:
