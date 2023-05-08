@@ -17,3 +17,16 @@ jobs:
         shell: bash
         run: |
           python3 main.py
+  run:
+    name: 🚀 Run 2
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout 2
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: 🚀 Run 2
+        shell: bash
+        run: |
+          python3 script.py
