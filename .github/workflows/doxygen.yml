@@ -1,0 +1,29 @@
+name: 🚀Doxygen
+
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  run:
+    name: 🚀 Doxygen
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install Deps
+        run: |
+          sudo apt install -y doxygen
+      - name: Generate Doxygen
+        shell: bash
+        run: |
+          doxygen Doxyfile
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: doxygen
+          path: html
