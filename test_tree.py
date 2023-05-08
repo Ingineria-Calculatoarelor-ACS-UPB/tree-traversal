@@ -19,5 +19,5 @@ class TestTree(unittest.TestCase):
         node = tree.find(10)
         self.assertIsNone(node)
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     unittest.main()
