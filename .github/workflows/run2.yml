@@ -1,7 +1,7 @@
 name: 🚀 Run2
 
 on:
-  push:
+  pull_request:
 
 jobs:
   run:
