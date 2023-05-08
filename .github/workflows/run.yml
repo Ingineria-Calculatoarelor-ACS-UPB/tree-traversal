@@ -1,7 +1,6 @@
 name: 🚀 Run
 
-on:
-  workflow_dispatch:
+on: [push]
 
 jobs:
   run:
@@ -16,4 +15,5 @@ jobs:
       - name: 🚀 Run
         shell: bash
         run: |
-          python3 main.py
+          python3 -m unittest tree.py
+
