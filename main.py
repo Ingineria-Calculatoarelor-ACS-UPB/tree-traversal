@@ -1,5 +1,6 @@
 from tree import Tree
 from node import Node
+import pytest
 
 tree = Tree()
 
@@ -13,3 +14,5 @@ tree.printTree()
 '''
 bhadgshdash
 '''
+def test_add():
+	assert 0 == 0
