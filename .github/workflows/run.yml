@@ -16,4 +16,4 @@ jobs:
       - name: 🚀 Run
         shell: bash
         run: |
-          python3 -m unittest main.py
+          python3 -m unittest test_tree.py
